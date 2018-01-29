@@ -1,0 +1,4 @@
+logging:
+  file: mprest.log
+  level:
+    org.springframework.web: INFO

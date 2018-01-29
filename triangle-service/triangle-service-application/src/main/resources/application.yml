@@ -1,0 +1,24 @@
+server:
+  port: 8090
+  context-path: /triangle-service
+
+logging:
+  file: mprest.log
+  level:
+    org.springframework.web: INFO
+
+# *** Database Configuration ***
+spring:
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/triangle
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: postgres
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+
+scheduledJob:
+  enabled: true
