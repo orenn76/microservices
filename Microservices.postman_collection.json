@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "66354e3c-0ac6-4b94-9e43-d8226a94b613",
+		"name": "Microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "455585"
+	},
+	"item": [
+		{
+			"name": "AddTriangle",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{              \r\n\t\"adjacent\":\"1\",\r\n    \"opposite\":\"2\",\r\n    \"state\":\"pre_calc\"           \r\n}"
+				},
+				"url": {
+					"raw": "localhost:8090/triangle-service/",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"triangle-service",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateTriangle",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{              \r\n\t\"adjacent\":\"0\",\r\n    \"opposite\":\"0\",\r\n    \"state\":\"post_calc\"          \r\n}"
+				},
+				"url": {
+					"raw": "localhost:8090/triangle-service/7",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"triangle-service",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTriangle",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{              \r\n\t\"adjacent\":\"7\",\r\n    \"opposite\":\"9\",\r\n    \"state\":\"PRE_CALC\"           \r\n}"
+				},
+				"url": {
+					"raw": "localhost:8090/triangle-service/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"triangle-service",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{              \r\n\t\"adjacent\":\"7\",\r\n    \"opposite\":\"9\",\r\n    \"state\":\"PRE_CALC\"           \r\n}"
+				},
+				"url": {
+					"raw": "localhost:8090/triangle-service/",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"triangle-service",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "data-injector - Generate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{              \r\n\t\"adjacent\":\"7\",\r\n    \"opposite\":\"9\",\r\n    \"state\":\"PRE_CALC\"           \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/data-injector/generate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"data-injector",
+						"generate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

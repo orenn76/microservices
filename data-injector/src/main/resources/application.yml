@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+logging:
+  file: microservices.log
+  level:
+    org.springframework.web: INFO
+
+triangleServiceClientUrl: http://localhost:8090/triangle-service

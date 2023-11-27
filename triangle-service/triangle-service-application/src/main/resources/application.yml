@@ -1,0 +1,38 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /triangle-service
+
+logging:
+  file: microservices.log
+  level:
+    org.springframework.web: INFO
+
+# *** Database Configuration ***
+spring:
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:file:./data/h2db;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;DB_CLOSE_DELAY=-1
+    password:
+    username: sa
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+#  datasource:
+#    platform: postgres
+#    url: jdbc:postgresql://localhost:5432/triangle
+#    driverClassName: org.postgresql.Driver
+#    username: postgres
+#    password: postgres
+#  jpa:
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: create-drop
+
+scheduledJob:
+  enabled: true
